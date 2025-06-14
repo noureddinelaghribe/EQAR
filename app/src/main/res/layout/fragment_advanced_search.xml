@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context=".Fragment.AdvancedSearchFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="البحث المتقدم"
+                android:textColor="@color/primary_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- نوع العقار -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="نوع العقار"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/TypeChipGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true">
+
+                            <ToggleButton
+                                android:id="@+id/toggleRealestate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:checked="true"
+                                android:minWidth="88dp"
+                                android:minHeight="48dp"
+                                android:padding="12dp"
+                                android:textColor="@color/toggle_text_selector"
+                                android:textOff="عقارات"
+                                android:textOn="عقارات" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleHotels"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:minWidth="88dp"
+                                android:minHeight="48dp"
+                                android:padding="12dp"
+                                android:textColor="@color/toggle_text_selector"
+                                android:textOff="فنادق"
+                                android:textOn="فنادق" />
+
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="الموقع"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/spinnerWilaya"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="اختر الولاية"
+                                android:inputType="none" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/spinnerBaladia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="اختر البلدية"
+                                android:inputType="none" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/llRealestate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="نوع العملية"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.chip.ChipGroup
+                                android:id="@+id/operationTypeChipGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:singleSelection="true">
+
+                                <ToggleButton
+                                    android:id="@+id/toggleRent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/chip_background_selector"
+                                    android:minWidth="88dp"
+                                    android:minHeight="48dp"
+                                    android:padding="12dp"
+                                    android:textColor="@color/toggle_text_selector"
+                                    android:textOff="كراء"
+                                    android:textOn="كراء" />
+
+                                <ToggleButton
+                                    android:id="@+id/toggleSale"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/chip_background_selector"
+                                    android:minWidth="88dp"
+                                    android:minHeight="48dp"
+                                    android:padding="12dp"
+                                    android:textColor="@color/toggle_text_selector"
+                                    android:textOff="بيع"
+                                    android:textOn="بيع" />
+
+                                <ToggleButton
+                                    android:id="@+id/toggleExchange"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/chip_background_selector"
+                                    android:minWidth="88dp"
+                                    android:minHeight="48dp"
+                                    android:padding="12dp"
+                                    android:textColor="@color/toggle_text_selector"
+                                    android:textOff="تبادل"
+                                    android:textOn="تبادل" />
+
+                            </com.google.android.material.chip.ChipGroup>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="نوع العقار"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleApartment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="شقة"
+                                        android:textOn="شقة" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleHouse"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="بيت طابق"
+                                        android:textOn="بيت طابق" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleCabin"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="كوخ"
+                                        android:textOn="كوخ" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleTouristComplex"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="مجمع سياحي"
+                                        android:textOn="مجمع سياحي" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleMausoleum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="مرقد"
+                                        android:textOn="مرقد" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleDuplex"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="دوبلكس"
+                                        android:textOn="دوبلكس" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleCommercial"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="محل تجاري"
+                                        android:textOn="محل تجاري" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleVilla"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="فيلا"
+                                        android:textOn="فيلا" />
+
+                                    <ToggleButton
+                                        android:id="@+id/togglePartyHall"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="قاعة حفلات"
+                                        android:textOn="قاعة حفلات" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleStudio"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="ستوديو"
+                                        android:textOn="ستوديو" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleLand"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="أرض"
+                                        android:textOn="أرض" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleAgriculturalLand"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="أرض فلاحية"
+                                        android:textOn="أرض فلاحية" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleBuilding"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="عمارة"
+                                        android:textOn="عمارة" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleBungalow"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="بالڨالو"
+                                        android:textOn="بالڨالو" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleWarehouse"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="مستودع - مصنع"
+                                        android:textOn="مستودع - مصنع" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleOther"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="آخر"
+                                        android:textOn="آخر" />
+
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="المميزات"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.chip.ChipGroup
+                                        android:id="@+id/featuresChipGroup"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ToggleButton
+                                            android:id="@+id/toggleParking"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/chip_background_selector"
+                                            android:minWidth="88dp"
+                                            android:minHeight="48dp"
+                                            android:padding="12dp"
+                                            android:textColor="@color/toggle_text_selector"
+                                            android:textOff="موقف سيارة"
+                                            android:textOn="موقف سيارة" />
+
+                                        <ToggleButton
+                                            android:id="@+id/toggleGarden"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/chip_background_selector"
+                                            android:minWidth="88dp"
+                                            android:minHeight="48dp"
+                                            android:padding="12dp"
+                                            android:textColor="@color/toggle_text_selector"
+                                            android:textOff="حديقة"
+                                            android:textOn="حديقة" />
+
+                                        <ToggleButton
+                                            android:id="@+id/togglePool"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/chip_background_selector"
+                                            android:minWidth="88dp"
+                                            android:minHeight="48dp"
+                                            android:padding="12dp"
+                                            android:textColor="@color/toggle_text_selector"
+                                            android:textOff="بركة سباحة"
+                                            android:textOn="بركة سباحة" />
+
+                                        <ToggleButton
+                                            android:id="@+id/toggleSecurity"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/chip_background_selector"
+                                            android:minWidth="88dp"
+                                            android:minHeight="48dp"
+                                            android:padding="12dp"
+                                            android:textColor="@color/toggle_text_selector"
+                                            android:textOff="حراسة"
+                                            android:textOn="حراسة" />
+
+                                    </com.google.android.material.chip.ChipGroup>
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="مجهزة"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.chip.ChipGroup
+                                android:id="@+id/furnishedChipGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:singleSelection="true">
+
+                                <ToggleButton
+                                    android:id="@+id/toggleFurnishedYes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/chip_background_selector"
+                                    android:minWidth="88dp"
+                                    android:minHeight="48dp"
+                                    android:padding="12dp"
+                                    android:textColor="@color/toggle_text_selector"
+                                    android:textOff="نعم"
+                                    android:textOn="نعم" />
+
+                                <ToggleButton
+                                    android:id="@+id/toggleFurnishedNo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/chip_background_selector"
+                                    android:minWidth="88dp"
+                                    android:minHeight="48dp"
+                                    android:padding="12dp"
+                                    android:textColor="@color/toggle_text_selector"
+                                    android:textOff="لا"
+                                    android:textOn="لا" />
+
+                                <ToggleButton
+                                    android:id="@+id/toggleFurnishedDoesntMatter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/chip_background_selector"
+                                    android:minWidth="88dp"
+                                    android:minHeight="48dp"
+                                    android:padding="12dp"
+                                    android:textColor="@color/toggle_text_selector"
+                                    android:textOff="لايهم"
+                                    android:textOn="لايهم" />
+
+                            </com.google.android.material.chip.ChipGroup>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="نطاق السعر"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_weight="1"
+                                    android:hint="من"
+                                    app:endIconMode="clear_text">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etMinPrice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_weight="1"
+                                    android:hint="إلى"
+                                    app:endIconMode="clear_text">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etMaxPrice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <com.google.android.material.slider.RangeSlider
+                                android:id="@+id/priceRangeSlider"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:stepSize="1000"
+                                android:valueFrom="0"
+                                android:valueTo="100000"
+                                app:labelBehavior="floating"
+                                app:labelStyle="@style/Widget.MaterialComponents.Tooltip"
+                                app:values="@array/initial_price_range" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <!-- Bottom Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@color/white"
+            android:elevation="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:text="عرض النتائج"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/primary_blue"
+                app:cornerRadius="12dp"
+                app:elevation="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReset"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:padding="8dp"
+                android:text="اعادة تعيين"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="12dp"
+                app:iconGravity="textStart"
+                app:strokeColor="@color/primary_blue"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

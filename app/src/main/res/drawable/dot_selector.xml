@@ -1,0 +1,17 @@
+<!-- res/drawable/circle_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- عندما يكون التاب مُختاراً -->
+    <item android:state_selected="true">
+        <shape android:shape="oval">
+            <size android:width="12dp" android:height="12dp"/>
+            <solid android:color="@color/primary_green"/>
+        </shape>
+    </item>
+    <!-- الحالة الافتراضية -->
+    <item>
+        <shape android:shape="oval">
+            <size android:width="8dp" android:height="8dp"/>
+            <solid android:color="@color/gray_2"/>
+        </shape>
+    </item>
+</selector>

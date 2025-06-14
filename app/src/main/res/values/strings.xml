@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">EQAR</string>
+
+    <!-- Login Screen -->
+    <string name="welcome">مرحباً بك</string>
+    <string name="login_subtitle">سجل دخولك للمتابعة</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="forgot_password">نسيت كلمة المرور؟</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="login_with_google">تسجيل الدخول بـ Google</string>
+    <string name="or">أو</string>
+    <string name="no_account">ليس لديك حساب؟</string>
+    <string name="create_account">إنشاء حساب جديد</string>
+
+    <!-- Register Screen -->
+    <string name="register_title">إنشاء حساب جديد</string>
+    <string name="register_subtitle">أنشئ حسابك الجديد وابدأ رحلتك معنا</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="i_agree">أوافق على</string>
+    <string name="privacy">سياسة الخصوصية</string>
+    <string name="terms">الشروط والأحكام</string>
+    <string name="and">و</string>
+    <string name="register">إنشاء حساب</string>
+    <string name="register_with_google">التسجيل بـ Google</string>
+    <string name="have_account">لديك حساب بالفعل؟</string>
+    <string name="login_here">تسجيل الدخول</string>
+
+    <!-- Content Descriptions -->
+    <string name="app_logo">شعار التطبيق</string>
+
+    <!-- Welcome Screen -->
+    <string name="tital_page_1">عقارات تناسب ذوقك</string>
+    <string name="content_page_1">الذكاء الاصطناعي يحلل بحثك السابق ويُقدم لك توصيات عقارية مخصصة، كما لو كان يعرف ما تفكر فيه!</string>
+    <string name="tital_page_2">اسأل «EQAR-bot» باللهجة الجزائرية!</string>
+    <string name="content_page_2"> نصية مع مساعد ذكي يفهم مصطلحات مثل «بالڨالو» و«الشقة مزيانة»، ويجيب على كل أسئلتك العقارية!</string>
+    <string name="tital_page_3">لا مكان للصور المزيفة</string>
+    <string name="content_page_3">تقنية الرؤية الحاسوبية تفحص صور العقار وتكشف التلاعب تلقائيًا، وتخبرك بعدد الغرف والخدمات من الصور فقط!</string>
+    <string name="tital_page_4">خاصية EQAR ADs</string>
+    <string name="content_page_4">منصة إعلانية للترويج لعقاراتك أو خدماتك والوصول إلى الجمهور المناسب على الفور</string>
+    <string name="tital_page_5">مميزات اخرى مدعومة بالذكاء الاصطناعي </string>
+    <string name="content_page_5">
+
+        * اعرف السعر العادل لعقارك بناءً على تحليل آلاف الإعلانات المشابهة في منطقتك. لا داعي للتخمين!
+        \n
+        * .الذكاء الاصطناعي يترجم أوصاف العقارات بين العربية والفرنسية بضغطة زر. وسّع فرصك بدون مجهود!
+        \n
+        * تقنية AI تُحلّل الإعلانات وتنبهك تلقائيًا إذا كان السعر مُشبوهًا أو الوصف غير واقعي. أمانك أولويتنا!
+        \n
+        * تقارير مبنية على بيانات السوق تُظهر لك أفضل المناطق للاستثمار في الجزائر. قرّارك راح يكون صائب!
+        \n
+        * مُقيّم عقاري افتراضي يُقدّر سعر أي عقار بدقة، بدون حجز موعد أو انتظار خبير!
+        \n
+        * الذكاء الاصطناعي يُرسل تنبيهات فورية عند ظهور عقار يناسب مواصفاتك الدقيقة. ما تفوتك الفرصة!
+
+    </string>
+    <string name="start">ابدأ الآن</string>
+    <string name="next">التالي</string>
+    <string name="skip">تخطي</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

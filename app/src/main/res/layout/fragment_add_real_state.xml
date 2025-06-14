@@ -1,0 +1,1875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.AddRealStateFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="اضافة"
+                android:textColor="@color/primary_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- نوع العقار -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardPropertyType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="نوع الطلب"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/TypeChipGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true">
+
+                            <ToggleButton
+                                android:id="@+id/toggleAddMyRealestate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:minWidth="88dp"
+                                android:minHeight="48dp"
+                                android:padding="12dp"
+                                android:textColor="@color/toggle_text_selector"
+                                android:textOff="اضف منزلك"
+                                android:textOn="اضف منزلك" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleAddRequest"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:minWidth="88dp"
+                                android:minHeight="48dp"
+                                android:padding="12dp"
+                                android:textColor="@color/toggle_text_selector"
+                                android:textOff="اضافة طلب"
+                                android:textOn="اضافة طلب" />
+
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardOperationType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="نوع العملية"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/operationTypeChipGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true">
+
+                            <ToggleButton
+                                android:id="@+id/toggleRent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:minWidth="88dp"
+                                android:minHeight="48dp"
+                                android:padding="12dp"
+                                android:textColor="@color/toggle_text_selector"
+                                android:textOff="كراء"
+                                android:textOn="كراء" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleSale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:minWidth="88dp"
+                                android:minHeight="48dp"
+                                android:padding="12dp"
+                                android:textColor="@color/toggle_text_selector"
+                                android:textOff="بيع"
+                                android:textOn="بيع" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleExchange"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:minWidth="88dp"
+                                android:minHeight="48dp"
+                                android:padding="12dp"
+                                android:textColor="@color/toggle_text_selector"
+                                android:textOff="تبادل"
+                                android:textOn="تبادل" />
+
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="الرجاء اصافة الاسم و اللقب "
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:hint="الاسم و اللقب"
+                            app:endIconMode="clear_text">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etFullName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="جنسك"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/genderChipGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true">
+
+                            <ToggleButton
+                                android:id="@+id/toggleGenderMan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:minWidth="88dp"
+                                android:minHeight="48dp"
+                                android:padding="12dp"
+                                android:textColor="@color/toggle_text_selector"
+                                android:textOff="ذكر"
+                                android:textOn="ذكر" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleGenderWomen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:minWidth="88dp"
+                                android:minHeight="48dp"
+                                android:padding="12dp"
+                                android:textColor="@color/toggle_text_selector"
+                                android:textOff="انثى"
+                                android:textOn="انثى" />
+
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardFamilyStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="الحالة العائلية"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/familyStatusChipGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true">
+
+                            <ToggleButton
+                                android:id="@+id/toggleFamilyStatusMerried"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:minWidth="88dp"
+                                android:minHeight="48dp"
+                                android:padding="12dp"
+                                android:textColor="@color/toggle_text_selector"
+                                android:textOff="متزوج"
+                                android:textOn="متزوج" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleFamilyStatusSingle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:minWidth="88dp"
+                                android:minHeight="48dp"
+                                android:padding="12dp"
+                                android:textColor="@color/toggle_text_selector"
+                                android:textOff="اعزب"
+                                android:textOn="اعزب" />
+
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardYearOfBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="سنة الميلاد"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:hint="مثال 1990"
+                                app:endIconDrawable="@drawable/ic_calendar"
+                                app:endIconMode="custom">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etYearOfBirth"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:focusable="false"
+                                    android:inputType="none"
+                                    android:textSize="14sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardStartOfRent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="بداية الايجار"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:hint="2025-07-07"
+                                app:endIconDrawable="@drawable/ic_calendar"
+                                app:endIconMode="custom">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etStartOfRent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:focusable="false"
+                                    android:gravity="start"
+                                    android:inputType="none"
+                                    android:textSize="14sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="الموقع"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/spinnerWilaya"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="اختر الولاية"
+                                android:inputType="none" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/spinnerBaladia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="اختر البلدية"
+                                android:inputType="none" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardRealEstateType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="نوع العقار"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleApartment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="شقة"
+                                        android:textOn="شقة" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleHouse"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="بيت طابق"
+                                        android:textOn="بيت طابق" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleCabin"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="كوخ"
+                                        android:textOn="كوخ" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleTouristComplex"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="مجمع سياحي"
+                                        android:textOn="مجمع سياحي" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleMausoleum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="مرقد"
+                                        android:textOn="مرقد" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleDuplex"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="دوبلكس"
+                                        android:textOn="دوبلكس" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleCommercial"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="محل تجاري"
+                                        android:textOn="محل تجاري" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleVilla"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="فيلا"
+                                        android:textOn="فيلا" />
+
+                                    <ToggleButton
+                                        android:id="@+id/togglePartyHall"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="قاعة حفلات"
+                                        android:textOn="قاعة حفلات" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleStudio"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="ستوديو"
+                                        android:textOn="ستوديو" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleLand"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="أرض"
+                                        android:textOn="أرض" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleAgriculturalLand"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="أرض فلاحية"
+                                        android:textOn="أرض فلاحية" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleBuilding"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="عمارة"
+                                        android:textOn="عمارة" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleBungalow"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="بالڨالو"
+                                        android:textOn="بالڨالو" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleWarehouse"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="مستودع - مصنع"
+                                        android:textOn="مستودع - مصنع" />
+
+                                    <ToggleButton
+                                        android:id="@+id/toggleOther"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/chip_background_selector"
+                                        android:minWidth="88dp"
+                                        android:minHeight="48dp"
+                                        android:padding="12dp"
+                                        android:textColor="@color/toggle_text_selector"
+                                        android:textOff="آخر"
+                                        android:textOn="آخر" />
+
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardFeatures"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="المميزات"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.chip.ChipGroup
+                                        android:id="@+id/featuresChipGroup"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ToggleButton
+                                            android:id="@+id/toggleParking"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/chip_background_selector"
+                                            android:minWidth="88dp"
+                                            android:minHeight="48dp"
+                                            android:padding="12dp"
+                                            android:textColor="@color/toggle_text_selector"
+                                            android:textOff="موقف سيارة"
+                                            android:textOn="موقف سيارة" />
+
+                                        <ToggleButton
+                                            android:id="@+id/toggleGarden"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/chip_background_selector"
+                                            android:minWidth="88dp"
+                                            android:minHeight="48dp"
+                                            android:padding="12dp"
+                                            android:textColor="@color/toggle_text_selector"
+                                            android:textOff="حديقة"
+                                            android:textOn="حديقة" />
+
+                                        <ToggleButton
+                                            android:id="@+id/togglePool"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/chip_background_selector"
+                                            android:minWidth="88dp"
+                                            android:minHeight="48dp"
+                                            android:padding="12dp"
+                                            android:textColor="@color/toggle_text_selector"
+                                            android:textOff="بركة سباحة"
+                                            android:textOn="بركة سباحة" />
+
+                                        <ToggleButton
+                                            android:id="@+id/toggleSecurity"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/chip_background_selector"
+                                            android:minWidth="88dp"
+                                            android:minHeight="48dp"
+                                            android:padding="12dp"
+                                            android:textColor="@color/toggle_text_selector"
+                                            android:textOff="حراسة"
+                                            android:textOn="حراسة" />
+
+                                    </com.google.android.material.chip.ChipGroup>
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardFurnished"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="مجهزة"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.chip.ChipGroup
+                                android:id="@+id/furnishedChipGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:singleSelection="true">
+
+                                <ToggleButton
+                                    android:id="@+id/toggleFurnishedYes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/chip_background_selector"
+                                    android:minWidth="88dp"
+                                    android:minHeight="48dp"
+                                    android:padding="12dp"
+                                    android:textColor="@color/toggle_text_selector"
+                                    android:textOff="نعم"
+                                    android:textOn="نعم" />
+
+                                <ToggleButton
+                                    android:id="@+id/toggleFurnishedNo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/chip_background_selector"
+                                    android:minWidth="88dp"
+                                    android:minHeight="48dp"
+                                    android:padding="12dp"
+                                    android:textColor="@color/toggle_text_selector"
+                                    android:textOff="لا"
+                                    android:textOn="لا" />
+
+                                <ToggleButton
+                                    android:id="@+id/toggleFurnishedDoesntMatter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/chip_background_selector"
+                                    android:minWidth="88dp"
+                                    android:minHeight="48dp"
+                                    android:padding="12dp"
+                                    android:textColor="@color/toggle_text_selector"
+                                    android:textOff="لايهم"
+                                    android:textOn="لايهم" />
+
+                            </com.google.android.material.chip.ChipGroup>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardRentalDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:text="ترغب في التأجير"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <!-- Daily/Monthly Selection -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="24dp"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/cardDaily"
+                                    android:layout_width="0dp"
+                                    android:layout_height="80dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    app:cardCornerRadius="12dp"
+                                    app:cardElevation="2dp"
+                                    app:strokeColor="@color/primary_blue"
+                                    app:strokeWidth="1dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/ivDaily"
+                                            android:layout_width="24dp"
+                                            android:layout_height="24dp"
+                                            android:layout_marginBottom="4dp"
+                                            android:src="@drawable/ic_moon_stars"
+                                            app:tint="@color/primary_blue" />
+
+                                        <TextView
+                                            android:id="@+id/tvDaily"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="يوم"
+                                            android:textColor="@color/text_primary"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/cardMonthly"
+                                    android:layout_width="0dp"
+                                    android:layout_height="80dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    app:cardCornerRadius="12dp"
+                                    app:cardElevation="2dp"
+                                    app:strokeColor="@color/primary_blue"
+                                    app:strokeWidth="1dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/ivMonthly"
+                                            android:layout_width="24dp"
+                                            android:layout_height="24dp"
+                                            android:layout_marginBottom="4dp"
+                                            android:src="@drawable/ic_calendar"
+                                            app:tint="@color/primary_blue" />
+
+                                        <TextView
+                                            android:id="@+id/tvMonthly"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="شهر"
+                                            android:textColor="@color/text_primary"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+                            <!-- Minimum Duration -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="أدنى مدة"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnDecrementDuration"
+                                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                        android:layout_width="48dp"
+                                        android:layout_height="48dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:insetTop="0dp"
+                                        android:insetBottom="0dp"
+                                        android:minWidth="0dp"
+                                        android:minHeight="0dp"
+                                        android:text="−"
+                                        android:textSize="18sp"
+                                        app:cornerRadius="24dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvDuration"
+                                        android:layout_width="60dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="1 يوم"
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnIncrementDuration"
+                                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                        android:layout_width="48dp"
+                                        android:layout_height="48dp"
+                                        android:layout_marginStart="8dp"
+                                        android:insetTop="0dp"
+                                        android:insetBottom="0dp"
+                                        android:minWidth="0dp"
+                                        android:minHeight="0dp"
+                                        android:text="+"
+                                        android:textSize="18sp"
+                                        app:cornerRadius="24dp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardRentalPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="الرجاء تحديد سعر "
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:text="ثمن:"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:hint="دج"
+                                app:endIconMode="clear_text">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etRentalPrice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <CheckBox
+                                android:id="@+id/cbNegotiable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="قابل للتفاوض"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRangeOfPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="نطاق السعر (لكل ليلة)"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:hint="من"
+                                app:endIconMode="clear_text">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etMinPriceHotel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:hint="إلى"
+                                app:endIconMode="clear_text">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etMaxPriceHotel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.slider.RangeSlider
+                            android:id="@+id/priceRangeSliderHotel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:stepSize="1000"
+                            android:valueFrom="0"
+                            android:valueTo="100000"
+                            app:labelBehavior="floating"
+                            app:labelStyle="@style/Widget.MaterialComponents.Tooltip"
+                            app:values="@array/initial_price_range" />
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- Property Features Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardPropertyDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text="يرجى تحديد مميزات اخرى"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!-- Floor Number -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="24dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="طابق رقم"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnDecrementFloor"
+                                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:insetTop="0dp"
+                                    android:insetBottom="0dp"
+                                    android:minWidth="0dp"
+                                    android:minHeight="0dp"
+                                    android:text="−"
+                                    android:textSize="18sp"
+                                    app:cornerRadius="24dp" />
+
+                                <TextView
+                                    android:id="@+id/tvFloorNumber"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="0"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnIncrementFloor"
+                                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_marginStart="8dp"
+                                    android:insetTop="0dp"
+                                    android:insetBottom="0dp"
+                                    android:minWidth="0dp"
+                                    android:minHeight="0dp"
+                                    android:text="+"
+                                    android:textSize="18sp"
+                                    app:cornerRadius="24dp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- Area -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="المساحة"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:hint="م²"
+                                app:endIconMode="clear_text">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etArea"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- الوثائق -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/documentsChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="الوثائق"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:chipSpacingVertical="8dp">
+
+                            <ToggleButton
+                                android:id="@+id/toggleRealEstateRecord"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:textOn="سجل عقاري"
+                                android:textOff="سجل عقاري"
+                                android:textColor="@color/toggle_text_selector"
+                                android:padding="12dp"
+                                android:minHeight="48dp"
+                                android:minWidth="88dp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleNotarizedContract"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:textOn="عقد موثق"
+                                android:textOff="عقد موثق"
+                                android:textColor="@color/toggle_text_selector"
+                                android:padding="12dp"
+                                android:minHeight="48dp"
+                                android:minWidth="88dp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleBuildingPermit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:textOn="رخصة بناء"
+                                android:textOff="رخصة بناء"
+                                android:textColor="@color/toggle_text_selector"
+                                android:padding="12dp"
+                                android:minHeight="48dp"
+                                android:minWidth="88dp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleDecision"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:textOn="قرار"
+                                android:textOff="قرار"
+                                android:textColor="@color/toggle_text_selector"
+                                android:layout_marginTop="8dp"
+                                android:padding="12dp"
+                                android:minHeight="48dp"
+                                android:minWidth="88dp" />
+
+                            <ToggleButton
+                                android:id="@+id/togglePartnershipContract"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:textOn="عقد شراكة في الملكية"
+                                android:textOff="عقد شراكة في الملكية"
+                                android:textColor="@color/toggle_text_selector"
+                                android:padding="12dp"
+                                android:minHeight="48dp"
+                                android:minWidth="88dp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleRealEstateDevelopment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:textOn="ترقية عقارية"
+                                android:textOff="ترقية عقارية"
+                                android:textColor="@color/toggle_text_selector"
+                                android:padding="12dp"
+                                android:minHeight="48dp"
+                                android:minWidth="88dp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleStampedPaper"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:textOn="ورقة بالطابع"
+                                android:textOff="ورقة بالطابع"
+                                android:textColor="@color/toggle_text_selector"
+                                android:padding="12dp"
+                                android:minHeight="48dp"
+                                android:minWidth="88dp" />
+
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- طريقة الدفع -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/paymentMethodChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="طريقة الدفع"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:chipSpacingVertical="8dp">
+
+                            <ToggleButton
+                                android:id="@+id/toggleInstallment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:textOn="بالتقسيط"
+                                android:textOff="بالتقسيط"
+                                android:textColor="@color/toggle_text_selector"
+                                android:padding="12dp"
+                                android:minHeight="48dp"
+                                android:minWidth="88dp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleBankCredit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:textOn="الائتمان البنكي"
+                                android:textOff="الائتمان البنكي"
+                                android:textColor="@color/toggle_text_selector"
+                                android:padding="12dp"
+                                android:minHeight="48dp"
+                                android:minWidth="88dp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleSalePromise"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:textOn="وعد بالبيع"
+                                android:textOff="وعد بالبيع"
+                                android:textColor="@color/toggle_text_selector"
+                                android:padding="12dp"
+                                android:minHeight="48dp"
+                                android:minWidth="88dp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleCash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_background_selector"
+                                android:textOn="نقداً"
+                                android:textOff="نقداً"
+                                android:textColor="@color/toggle_text_selector"
+                                android:padding="12dp"
+                                android:minHeight="48dp"
+                                android:minWidth="88dp" />
+
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="الرجاء إدراج صور"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <!-- YouTube Link Section -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="رابط اليوتيوب (اختياري)"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:hint="رابط اليوتيوب"
+                                app:endIconMode="clear_text">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etYouTubeLink"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textUri" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <!-- Image Upload Instructions -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="اختر على الأقل 3 صور"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:lineSpacingExtra="2dp"
+                                android:text="تجذب الصور عالية الجودة المزيد من المشاهدات، وصورة الغلاف تترك الانطباع الأول: اختر الأفضل!"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+
+                            <!-- Image Upload Grid -->
+                            <GridLayout
+                                android:id="@+id/imageUploadGrid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:columnCount="2"
+                                android:rowCount="2">
+
+                                <!-- Main Image (Primary) -->
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/cardMainImage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="180dp"
+                                    android:layout_columnSpan="2"
+                                    android:layout_columnWeight="1"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    app:cardCornerRadius="12dp"
+                                    app:cardElevation="2dp"
+                                    app:strokeColor="@color/primary_blue"
+                                    app:strokeWidth="2dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/ivMainImage"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:alpha="0.5"
+                                            android:background="@color/white"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/sample_property_1" />
+
+                                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                            android:id="@+id/fabAddMainImage"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:backgroundTint="@color/white"
+                                            android:src="@drawable/ic_add"
+                                            app:borderWidth="0dp"
+                                            app:elevation="4dp"
+                                            app:fabSize="normal"
+                                            app:tint="@color/primary_blue" />
+
+                                    </RelativeLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <!-- Secondary Image 1 -->
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/cardSecondImage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="120dp"
+                                    android:layout_columnWeight="1"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    app:cardCornerRadius="12dp"
+                                    app:cardElevation="2dp"
+                                    app:strokeColor="@color/primary_blue"
+                                    app:strokeWidth="1dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/ivSecondImage"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:alpha="0.5"
+                                            android:background="@color/white"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/sample_property_2" />
+
+                                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                            android:id="@+id/fabAddSecondImage"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:backgroundTint="@color/white"
+                                            android:src="@drawable/ic_add"
+                                            app:borderWidth="0dp"
+                                            app:elevation="4dp"
+                                            app:fabSize="mini"
+                                            app:tint="@color/primary_blue" />
+
+                                    </RelativeLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <!-- Secondary Image 2 -->
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/cardThirdImage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="120dp"
+                                    android:layout_columnWeight="1"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    app:cardCornerRadius="12dp"
+                                    app:cardElevation="2dp"
+                                    app:strokeColor="@color/primary_blue"
+                                    app:strokeWidth="1dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/ivThirdImage"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:alpha="0.5"
+                                            android:background="@color/white"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/sample_property_3" />
+
+                                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                            android:id="@+id/fabAddThirdImage"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:backgroundTint="@color/white"
+                                            android:src="@drawable/ic_add"
+                                            app:borderWidth="0dp"
+                                            app:elevation="4dp"
+                                            app:fabSize="mini"
+                                            app:tint="@color/primary_blue" />
+
+                                    </RelativeLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </GridLayout>
+
+                            <!-- Add More Images Button -->
+                            <!--                        <com.google.android.material.button.MaterialButton-->
+                            <!--                            android:id="@+id/btnAddMoreImages"-->
+                            <!--                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="wrap_content"-->
+                            <!--                            android:layout_marginTop="16dp"-->
+                            <!--                            android:text="إضافة المزيد من الصور"-->
+                            <!--                            android:textColor="@color/primary_blue"-->
+                            <!--                            app:icon="@drawable/ic_add"-->
+                            <!--                            app:iconTint="@color/primary_blue"-->
+                            <!--                            app:strokeColor="@color/primary_blue" />-->
+
+                            <!-- Image Counter -->
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="الرجاء اصافة الوصف "
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:hint="وصف"
+                                app:endIconMode="clear_text">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp"
+                                    android:gravity="start"
+                                    android:inputType="text" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <!-- Bottom Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="8dp"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="نشر"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/primary_blue"
+                app:cornerRadius="12dp"
+                app:elevation="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReset"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="تجاهل"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="12dp"
+                app:iconGravity="textStart"
+                app:strokeColor="@color/primary_blue"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

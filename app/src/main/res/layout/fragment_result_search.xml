@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ResultSearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/chip_background_selector"
+            android:hint="سكيكدة, امجازالدشيش"
+            app:endIconMode="clear_text">
+
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:id="@+id/etMaxPriceHotel"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:drawableStart="@drawable/ic_location"-->
+            <!--                android:drawableTint="@color/gray_2"-->
+            <!--                android:inputType="number" />-->
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/primary_blue"
+                android:completionThreshold="1" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/amenitiesChipGroupHotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/iBAllSettings"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/chip_background_selector"
+                        android:padding="15dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/settings"
+                        android:textColor="@color/toggle_text_selector"
+                        app:tint="@color/primary_blue" />
+
+                    <TextView
+                        android:id="@+id/toggleBreakfastHotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@drawable/chip_background_selector"
+                        android:drawableStart="@drawable/down_arrow"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/primary_blue"
+                        android:gravity="center"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:text="بيع"
+                        android:textColor="@color/primary_blue"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tVType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@drawable/chip_background_selector"
+                        android:drawableStart="@drawable/down_arrow"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/primary_blue"
+                        android:gravity="center"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:text="شقة"
+                        android:textColor="@color/primary_blue"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/TvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@drawable/chip_background_selector"
+                        android:drawableStart="@drawable/down_arrow"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/primary_blue"
+                        android:gravity="center"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:text="30,000 - 15,000"
+                        android:textColor="@color/primary_blue"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tVIBAllSettings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@drawable/chip_background_selector"
+                        android:drawableStart="@drawable/down_arrow"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/primary_blue"
+                        android:gravity="center"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:text="الجميع"
+                        android:textColor="@color/primary_blue"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_property" />
+
+
+
+    </LinearLayout>
+</FrameLayout>
