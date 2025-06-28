@@ -13,7 +13,7 @@ import com.noureddine.eqar.Model.PropertyItem
 import com.noureddine.eqar.R
 import com.noureddine.eqar.databinding.FragmentHomeBinding
 import com.noureddine.eqar.databinding.FragmentResultSearchBinding
-import com.noureddine.eqar.utils.Constants.Companion.wilayasFr
+import com.noureddine.eqar.utils.Constants.Companion.wilayasAr
 
 
 class ResultSearchFragment : Fragment() {
@@ -44,7 +44,7 @@ class ResultSearchFragment : Fragment() {
 
     private fun setupAutoCompleteTextView(){
 
-        val locations: MutableList<String> = wilayasFr.toMutableList()
+        val locations: MutableList<String> = wilayasAr.toMutableList()
 
         val adapter = ArrayAdapter<String>(
             requireContext(),  // في Fragment استخدم requireContext()

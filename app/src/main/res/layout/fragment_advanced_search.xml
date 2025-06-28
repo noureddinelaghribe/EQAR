@@ -188,49 +188,61 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
-                            <com.google.android.material.chip.ChipGroup
-                                android:id="@+id/operationTypeChipGroup"
-                                android:layout_width="match_parent"
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/typeOperationRecyclerView"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                app:singleSelection="true">
+                                android:orientation="vertical"
+                                tools:itemCount="1"
+                                tools:listitem="@layout/item_toggle"/>
 
-                                <ToggleButton
-                                    android:id="@+id/toggleRent"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/chip_background_selector"
-                                    android:minWidth="88dp"
-                                    android:minHeight="48dp"
-                                    android:padding="12dp"
-                                    android:textColor="@color/toggle_text_selector"
-                                    android:textOff="كراء"
-                                    android:textOn="كراء" />
+                            <!--                            <com.google.android.material.chip.ChipGroup-->
+<!--                                android:id="@+id/operationTypeChipGroup"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                app:singleSelection="true">-->
 
-                                <ToggleButton
-                                    android:id="@+id/toggleSale"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/chip_background_selector"
-                                    android:minWidth="88dp"
-                                    android:minHeight="48dp"
-                                    android:padding="12dp"
-                                    android:textColor="@color/toggle_text_selector"
-                                    android:textOff="بيع"
-                                    android:textOn="بيع" />
+<!--                                <ToggleButton-->
+<!--                                    android:id="@+id/toggleRent"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@drawable/chip_background_selector"-->
+<!--                                    android:minWidth="88dp"-->
+<!--                                    android:minHeight="48dp"-->
+<!--                                    android:padding="12dp"-->
+<!--                                    android:textColor="@color/toggle_text_selector"-->
+<!--                                    android:textOff="كراء"-->
+<!--                                    android:textOn="كراء" />-->
 
-                                <ToggleButton
-                                    android:id="@+id/toggleExchange"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/chip_background_selector"
-                                    android:minWidth="88dp"
-                                    android:minHeight="48dp"
-                                    android:padding="12dp"
-                                    android:textColor="@color/toggle_text_selector"
-                                    android:textOff="تبادل"
-                                    android:textOn="تبادل" />
+<!--                                <ToggleButton-->
+<!--                                    android:id="@+id/toggleSale"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@drawable/chip_background_selector"-->
+<!--                                    android:minWidth="88dp"-->
+<!--                                    android:minHeight="48dp"-->
+<!--                                    android:padding="12dp"-->
+<!--                                    android:textColor="@color/toggle_text_selector"-->
+<!--                                    android:textOff="بيع"-->
+<!--                                    android:textOn="بيع" />-->
 
-                            </com.google.android.material.chip.ChipGroup>
+<!--                                <ToggleButton-->
+<!--                                    android:id="@+id/toggleExchange"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@drawable/chip_background_selector"-->
+<!--                                    android:minWidth="88dp"-->
+<!--                                    android:minHeight="48dp"-->
+<!--                                    android:padding="12dp"-->
+<!--                                    android:textColor="@color/toggle_text_selector"-->
+<!--                                    android:textOff="تبادل"-->
+<!--                                    android:textOn="تبادل" />-->
+
+<!--                            </com.google.android.material.chip.ChipGroup>-->
+
+
+
+
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
@@ -256,226 +268,237 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
-                            <HorizontalScrollView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scrollbars="none">
+<!--                            <HorizontalScrollView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:scrollbars="none">-->
 
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:orientation="horizontal">-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleApartment"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="شقة"
-                                        android:textOn="شقة" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleApartment"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="شقة"-->
+<!--                                        android:textOn="شقة" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleHouse"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="8dp"
-                                        android:layout_marginEnd="8dp"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="بيت طابق"
-                                        android:textOn="بيت طابق" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleHouse"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginStart="8dp"-->
+<!--                                        android:layout_marginEnd="8dp"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="بيت طابق"-->
+<!--                                        android:textOn="بيت طابق" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleCabin"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="كوخ"
-                                        android:textOn="كوخ" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleCabin"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="كوخ"-->
+<!--                                        android:textOn="كوخ" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleTouristComplex"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="8dp"
-                                        android:layout_marginEnd="8dp"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="مجمع سياحي"
-                                        android:textOn="مجمع سياحي" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleTouristComplex"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginStart="8dp"-->
+<!--                                        android:layout_marginEnd="8dp"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="مجمع سياحي"-->
+<!--                                        android:textOn="مجمع سياحي" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleMausoleum"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="مرقد"
-                                        android:textOn="مرقد" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleMausoleum"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="مرقد"-->
+<!--                                        android:textOn="مرقد" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleDuplex"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="8dp"
-                                        android:layout_marginEnd="8dp"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="دوبلكس"
-                                        android:textOn="دوبلكس" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleDuplex"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginStart="8dp"-->
+<!--                                        android:layout_marginEnd="8dp"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="دوبلكس"-->
+<!--                                        android:textOn="دوبلكس" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleCommercial"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="محل تجاري"
-                                        android:textOn="محل تجاري" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleCommercial"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="محل تجاري"-->
+<!--                                        android:textOn="محل تجاري" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleVilla"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="8dp"
-                                        android:layout_marginEnd="8dp"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="فيلا"
-                                        android:textOn="فيلا" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleVilla"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginStart="8dp"-->
+<!--                                        android:layout_marginEnd="8dp"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="فيلا"-->
+<!--                                        android:textOn="فيلا" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/togglePartyHall"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="قاعة حفلات"
-                                        android:textOn="قاعة حفلات" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/togglePartyHall"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="قاعة حفلات"-->
+<!--                                        android:textOn="قاعة حفلات" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleStudio"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="8dp"
-                                        android:layout_marginEnd="8dp"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="ستوديو"
-                                        android:textOn="ستوديو" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleStudio"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginStart="8dp"-->
+<!--                                        android:layout_marginEnd="8dp"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="ستوديو"-->
+<!--                                        android:textOn="ستوديو" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleLand"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="أرض"
-                                        android:textOn="أرض" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleLand"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="أرض"-->
+<!--                                        android:textOn="أرض" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleAgriculturalLand"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="8dp"
-                                        android:layout_marginEnd="8dp"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="أرض فلاحية"
-                                        android:textOn="أرض فلاحية" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleAgriculturalLand"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginStart="8dp"-->
+<!--                                        android:layout_marginEnd="8dp"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="أرض فلاحية"-->
+<!--                                        android:textOn="أرض فلاحية" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleBuilding"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="عمارة"
-                                        android:textOn="عمارة" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleBuilding"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="عمارة"-->
+<!--                                        android:textOn="عمارة" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleBungalow"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="8dp"
-                                        android:layout_marginEnd="8dp"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="بالڨالو"
-                                        android:textOn="بالڨالو" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleBungalow"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginStart="8dp"-->
+<!--                                        android:layout_marginEnd="8dp"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="بالڨالو"-->
+<!--                                        android:textOn="بالڨالو" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleWarehouse"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="مستودع - مصنع"
-                                        android:textOn="مستودع - مصنع" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleWarehouse"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="مستودع - مصنع"-->
+<!--                                        android:textOn="مستودع - مصنع" />-->
 
-                                    <ToggleButton
-                                        android:id="@+id/toggleOther"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="8dp"
-                                        android:layout_marginEnd="8dp"
-                                        android:background="@drawable/chip_background_selector"
-                                        android:minWidth="88dp"
-                                        android:minHeight="48dp"
-                                        android:padding="12dp"
-                                        android:textColor="@color/toggle_text_selector"
-                                        android:textOff="آخر"
-                                        android:textOn="آخر" />
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleOther"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginStart="8dp"-->
+<!--                                        android:layout_marginEnd="8dp"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="آخر"-->
+<!--                                        android:textOn="آخر" />-->
 
-                                </LinearLayout>
-                            </HorizontalScrollView>
+<!--                                </LinearLayout>-->
+
+<!--                            </HorizontalScrollView>-->
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/PropertyNameRecyclerView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:itemCount="1"
+                                tools:listitem="@layout/item_toggle"/>
+
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
@@ -502,72 +525,82 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
-                            <HorizontalScrollView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scrollbars="none">
+<!--                            <HorizontalScrollView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:scrollbars="none">-->
 
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:orientation="vertical">-->
 
-                                    <com.google.android.material.chip.ChipGroup
-                                        android:id="@+id/featuresChipGroup"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
+<!--                                    <com.google.android.material.chip.ChipGroup-->
+<!--                                        android:id="@+id/featuresChipGroup"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content">-->
 
-                                        <ToggleButton
-                                            android:id="@+id/toggleParking"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:background="@drawable/chip_background_selector"
-                                            android:minWidth="88dp"
-                                            android:minHeight="48dp"
-                                            android:padding="12dp"
-                                            android:textColor="@color/toggle_text_selector"
-                                            android:textOff="موقف سيارة"
-                                            android:textOn="موقف سيارة" />
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggleParking"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="موقف سيارة"-->
+<!--                                            android:textOn="موقف سيارة" />-->
 
-                                        <ToggleButton
-                                            android:id="@+id/toggleGarden"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:background="@drawable/chip_background_selector"
-                                            android:minWidth="88dp"
-                                            android:minHeight="48dp"
-                                            android:padding="12dp"
-                                            android:textColor="@color/toggle_text_selector"
-                                            android:textOff="حديقة"
-                                            android:textOn="حديقة" />
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggleGarden"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="حديقة"-->
+<!--                                            android:textOn="حديقة" />-->
 
-                                        <ToggleButton
-                                            android:id="@+id/togglePool"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:background="@drawable/chip_background_selector"
-                                            android:minWidth="88dp"
-                                            android:minHeight="48dp"
-                                            android:padding="12dp"
-                                            android:textColor="@color/toggle_text_selector"
-                                            android:textOff="بركة سباحة"
-                                            android:textOn="بركة سباحة" />
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/togglePool"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="بركة سباحة"-->
+<!--                                            android:textOn="بركة سباحة" />-->
 
-                                        <ToggleButton
-                                            android:id="@+id/toggleSecurity"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:background="@drawable/chip_background_selector"
-                                            android:minWidth="88dp"
-                                            android:minHeight="48dp"
-                                            android:padding="12dp"
-                                            android:textColor="@color/toggle_text_selector"
-                                            android:textOff="حراسة"
-                                            android:textOn="حراسة" />
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggleSecurity"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="حراسة"-->
+<!--                                            android:textOn="حراسة" />-->
 
-                                    </com.google.android.material.chip.ChipGroup>
-                                </LinearLayout>
-                            </HorizontalScrollView>
+<!--                                    </com.google.android.material.chip.ChipGroup>-->
+<!--                                </LinearLayout>-->
+<!--                            </HorizontalScrollView>-->
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/featuresRecyclerView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:itemCount="1"
+                                tools:listitem="@layout/item_toggle"/>
+
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
@@ -719,7 +752,670 @@
                 </LinearLayout>
 
 
+                <LinearLayout
+                    android:id="@+id/llHotels"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="تواريخ الإقامة"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_weight="1"
+                                    android:hint="تاريخ الوصول"
+                                    app:endIconDrawable="@drawable/ic_calendar"
+                                    app:endIconMode="custom">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etCheckInDateHotel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:inputType="none"
+                                        android:textSize="14sp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_weight="1"
+                                    android:hint="تاريخ المغادرة"
+                                    app:endIconDrawable="@drawable/ic_calendar"
+                                    app:endIconMode="custom">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etCheckOutDateHotel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:inputType="none"
+                                        android:textSize="14sp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="الضيوف والغرف"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_weight="1"
+                                    android:hint="عدد البالغين">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etAdultsHotel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:maxLength="2" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_weight="1"
+                                    android:hint="عدد الأطفال">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etChildrenHotel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:maxLength="2" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_weight="1"
+                                    android:hint="عدد الغرف">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etRoomsHotel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:maxLength="2" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="تصنيف الفندق"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+<!--                            <HorizontalScrollView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:scrollbars="none">-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:orientation="vertical">-->
+
+<!--                                    <com.google.android.material.chip.ChipGroup-->
+<!--                                        android:id="@+id/starRatingChipGroupHotel"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        app:singleSelection="false">-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggle5StarHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="★★★★★"-->
+<!--                                            android:textOn="★★★★★" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggle4StarHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="★★★★"-->
+<!--                                            android:textOn="★★★★" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggle3StarHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="★★★"-->
+<!--                                            android:textOn="★★★" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggle2StarHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="★★"-->
+<!--                                            android:textOn="★★" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggle1StarHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="★"-->
+<!--                                            android:textOn="★" />-->
+
+<!--                                    </com.google.android.material.chip.ChipGroup>-->
+<!--                                </LinearLayout>-->
+<!--                            </HorizontalScrollView>-->
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/starRatingRecyclerView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:itemCount="1"
+                                tools:listitem="@layout/item_toggle"/>
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="نوع الإقامة"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+<!--                            <HorizontalScrollView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:scrollbars="none">-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:orientation="horizontal">-->
+
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleHotel"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="فندق"-->
+<!--                                        android:textOn="فندق" />-->
+
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleResortHotel"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginStart="8dp"-->
+<!--                                        android:layout_marginEnd="8dp"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="منتجع"-->
+<!--                                        android:textOn="منتجع" />-->
+
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleAparthotelHotel"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="شقق فندقية"-->
+<!--                                        android:textOn="شقق فندقية" />-->
+
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleGuesthouseHotel"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginStart="8dp"-->
+<!--                                        android:layout_marginEnd="8dp"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="بيت ضيافة"-->
+<!--                                        android:textOn="بيت ضيافة" />-->
+
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleHostelHotel"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="نزل"-->
+<!--                                        android:textOn="نزل" />-->
+
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleMotelHotel"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginStart="8dp"-->
+<!--                                        android:layout_marginEnd="8dp"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="موتيل"-->
+<!--                                        android:textOn="موتيل" />-->
+
+<!--                                    <ToggleButton-->
+<!--                                        android:id="@+id/toggleCampingHotel"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@drawable/chip_background_selector"-->
+<!--                                        android:minWidth="88dp"-->
+<!--                                        android:minHeight="48dp"-->
+<!--                                        android:padding="12dp"-->
+<!--                                        android:textColor="@color/toggle_text_selector"-->
+<!--                                        android:textOff="مخيم"-->
+<!--                                        android:textOn="مخيم" />-->
+
+<!--                                </LinearLayout>-->
+<!--                            </HorizontalScrollView>-->
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/typeResidenceRecyclerView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:itemCount="1"
+                                tools:listitem="@layout/item_toggle"/>
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="المرافق والخدمات"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+<!--                            <HorizontalScrollView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:scrollbars="none">-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:orientation="vertical">-->
+
+<!--                                    <com.google.android.material.chip.ChipGroup-->
+<!--                                        android:id="@+id/amenitiesChipGroupHotel"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content">-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggleWifiHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="واي فاي مجاني"-->
+<!--                                            android:textOn="واي فاي مجاني" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggleBreakfastHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="إفطار مجاني"-->
+<!--                                            android:textOn="إفطار مجاني" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggleParkingHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="موقف سيارات"-->
+<!--                                            android:textOn="موقف سيارات" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/togglePoolHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="مسبح"-->
+<!--                                            android:textOn="مسبح" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggleGymHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="صالة رياضية"-->
+<!--                                            android:textOn="صالة رياضية" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggleSpaHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="سبا"-->
+<!--                                            android:textOn="سبا" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggleRestaurantHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="مطعم"-->
+<!--                                            android:textOn="مطعم" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/toggleRoomServiceHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="خدمة الغرف"-->
+<!--                                            android:textOn="خدمة الغرف" />-->
+
+<!--                                        <ToggleButton-->
+<!--                                            android:id="@+id/togglePetFriendlyHotel"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:background="@drawable/chip_background_selector"-->
+<!--                                            android:minWidth="88dp"-->
+<!--                                            android:minHeight="48dp"-->
+<!--                                            android:padding="12dp"-->
+<!--                                            android:textColor="@color/toggle_text_selector"-->
+<!--                                            android:textOff="يقبل الحيوانات"-->
+<!--                                            android:textOn="يقبل الحيوانات" />-->
+
+<!--                                    </com.google.android.material.chip.ChipGroup>-->
+<!--                                </LinearLayout>-->
+<!--                            </HorizontalScrollView>-->
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/featuresHotelRecyclerView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:itemCount="1"
+                                tools:listitem="@layout/item_toggle"/>
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="نطاق السعر (لكل ليلة)"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_weight="1"
+                                    android:hint="من"
+                                    app:endIconMode="clear_text">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etMinPriceHotel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_weight="1"
+                                    android:hint="إلى"
+                                    app:endIconMode="clear_text">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/etMaxPriceHotel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <com.google.android.material.slider.RangeSlider
+                                android:id="@+id/priceRangeSliderHotel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:stepSize="1000"
+                                android:valueFrom="0"
+                                android:valueTo="100000"
+                                app:labelBehavior="floating"
+                                app:labelStyle="@style/Widget.MaterialComponents.Tooltip"
+                                app:values="@array/initial_price_range" />
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
 
 
             </LinearLayout>

@@ -34,7 +34,7 @@ class PropertyAdapter(
                 }
 
                 val wilaya = Constants.wilayasFr.get(item.location.get(0))
-                val baladias = Constants.wilayaToBaladiasFr[wilaya]
+                val baladias = Constants.wilayaToBaladiasAr[wilaya]
                 val baladia = baladias?.get(item.location.get(1))  // This will give you "Tamentit"
                 tvLocation.text = wilaya+", "+baladia
 
@@ -98,11 +98,7 @@ class PropertyAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PropertyViewHolder {
-        val binding = ItemPropertyBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false
-        )
+        val binding = ItemPropertyBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PropertyViewHolder(binding)
     }
 

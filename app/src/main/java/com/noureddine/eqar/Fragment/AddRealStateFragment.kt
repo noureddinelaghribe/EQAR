@@ -17,8 +17,8 @@ import androidx.fragment.app.Fragment
 import com.noureddine.eqar.R
 import com.noureddine.eqar.databinding.FragmentAddRealStateBinding
 import com.noureddine.eqar.databinding.FragmentAdvancedSearchBinding
-import com.noureddine.eqar.utils.Constants.Companion.wilayaToBaladiasFr
-import com.noureddine.eqar.utils.Constants.Companion.wilayasFr
+import com.noureddine.eqar.utils.Constants.Companion.wilayaToBaladiasAr
+import com.noureddine.eqar.utils.Constants.Companion.wilayasAr
 import java.util.ArrayList
 import java.util.List
 import kotlin.collections.get
@@ -199,11 +199,11 @@ class AddRealStateFragment : Fragment() {
 
     private fun setupSpinners() {
         // Setup Wilaya spinner
-        val wilayaAdapter = ArrayAdapter(requireContext(), R.layout.item_dropdown, wilayasFr)
+        val wilayaAdapter = ArrayAdapter(requireContext(), R.layout.item_dropdown, wilayasAr)
         (binding.spinnerWilaya as? AutoCompleteTextView)?.apply {
             setAdapter(wilayaAdapter)
             setOnItemClickListener { _, _, position, _ ->
-                selectedWilaya = wilayasFr[position]
+                selectedWilaya = wilayasAr[position]
                 updateBaladiaSpinner(selectedWilaya)
             }
         }
@@ -211,7 +211,7 @@ class AddRealStateFragment : Fragment() {
         // Setup Baladia spinner
         (binding.spinnerBaladia as? AutoCompleteTextView)?.apply {
             setOnItemClickListener { _, _, position, _ ->
-                val baladias = wilayaToBaladiasFr[selectedWilaya] ?: emptyList()
+                val baladias = wilayaToBaladiasAr[selectedWilaya] ?: emptyList()
                 if (position < baladias.size) {
                     selectedBaladia = baladias[position]
                 }
@@ -220,7 +220,7 @@ class AddRealStateFragment : Fragment() {
     }
 
     private fun updateBaladiaSpinner(selectedWilaya: String?) {
-        val baladias = wilayaToBaladiasFr[selectedWilaya] ?: emptyList()
+        val baladias = wilayaToBaladiasAr[selectedWilaya] ?: emptyList()
         val baladiaAdapter = ArrayAdapter(requireContext(), R.layout.item_dropdown, baladias)
         (binding.spinnerBaladia as? AutoCompleteTextView)?.apply {
             setAdapter(baladiaAdapter)

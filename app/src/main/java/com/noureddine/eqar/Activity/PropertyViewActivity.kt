@@ -108,7 +108,7 @@ class PropertyViewActivity : AppCompatActivity() {
             binding.tvPrice.text = "حسب الاتفاق"
         }
         val wilaya = Constants.wilayasFr.get(propertyItem.location.get(0))
-        val baladias = Constants.wilayaToBaladiasFr[wilaya]
+        val baladias = Constants.wilayaToBaladiasAr[wilaya]
         val baladia = baladias?.get(propertyItem.location.get(1))
         binding.tvLocation.text = wilaya+", "+baladia
         binding.tvDescription.text = propertyItem.description
